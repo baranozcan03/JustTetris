@@ -1,0 +1,7 @@
+//time to create the grids, the gameplay screen will be divided int squares,
+//each square will represent a cell of a tetromino. 
+//int X will be the precense of a piece, 0 will be the absence of a piece
+//X = the uniqe encoding of a tetromino color. 
+//we will use 6 different colors, one for each tetromino, and one for the background
+//IMPORTANT REMARK: the tetromino controlled by the player will not be handeled in this manner,
+//only the tetrominos that are already on the board will be handeled in this manner
