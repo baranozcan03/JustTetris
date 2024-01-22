@@ -1,6 +1,6 @@
 #include <raylib.h>
 #include "grid.h"
-   
+#include "blocks.cpp"
 
 int main()
 {
@@ -14,6 +14,7 @@ int main()
 
 
     Grid grid;
+    O_Tetromino block= O_Tetromino();
     grid.PrintGrid();
 
 
@@ -22,9 +23,9 @@ int main()
         BeginDrawing();//prepare to begin drawing
         ClearBackground(backgroundColour);//clear the background to pale green, /typically done once per frame, at the beginning of the loop
         //the previous frame is now gone, so we can work without worrying about what was there before
-        
+    
         grid.Draw(); //draw the grid to the screen
-
+        block.Draw();
 
 
 

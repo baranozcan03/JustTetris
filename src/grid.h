@@ -12,10 +12,6 @@ public:
     void PrintGrid(); //draw the grid to the screen
 
 private:
-    //methods
-    std::vector<Color> getCellColours();
-
-
     //variables
     int numberOfRows; //number of rows in the game grid
     int numberOfColumns; //number of columns in the game grid

@@ -1,4 +1,5 @@
 #include "grid.h"
+#include "colors.h"
 #include "iostream"
 
 
@@ -8,7 +9,7 @@ Grid::Grid()
     numberOfColumns = 10;
     cellSize = 50; //length of one side of a gird cell in pixels
     initializeGrid();//initialize the grid to all 0's
-    colors = getCellColours();
+    colors = getColors();
 }
 
 void Grid::initializeGrid()
@@ -32,17 +33,6 @@ void Grid::PrintGrid()
     }
 }
 
-std::vector<Color> Grid::getCellColours(){
-    Color darkGray = {26, 31, 40 ,255};
-    Color green = { 0x00, 0xFF, 0x00, 0xFF };
-    Color red = { 0xFF, 0x00, 0x00, 0xFF };
-    Color orange = { 0xFF, 0xA5, 0x00, 0xFF };
-    Color yellow = { 0xFF, 0xFF, 0x00, 0xFF };
-    Color purple = { 0x80, 0x00, 0x80, 0xFF };
-    Color blue = { 0x00, 0x00, 0xFF, 0xFF };
-
-    return {darkGray, green, red, orange, yellow, purple, blue};
-}
 
 void Grid::Draw()
 {
