@@ -51,4 +51,60 @@ void Grid::Draw()
         }
     }
 }
-    
+
+bool Grid::IsCellOutOfBounds(int row, int col)
+{
+    return (((row < 0) || (row >= numberOfRows)) || ((col < 0) || (col >= numberOfColumns)));
+}
+
+bool Grid::IsCellEmpty(int row, int col)
+{
+    return gridValues[row][col] == 0;
+}
+
+bool Grid::IsRowFull(int row)
+{
+    for(int col = 0; col < numberOfColumns; col++) //for all columns
+    {
+        if(gridValues[row][col] == 0) //if the cell is empty
+        {
+            return false; //the row is not full
+        }
+    }
+    return true; //the row is full
+}
+
+void Grid::DeleteRow(int row)
+{
+    for(int col = 0; col < numberOfColumns; col++) //for all columns
+    {
+        gridValues[row][col] = 0; //set the cell to 0
+    }
+} 
+
+void Grid::MoveRowDown(int row, int numberOfTimes)
+{
+    for(int col = 0; col < numberOfColumns; col++) //for all columns
+    {
+        gridValues[row+numberOfTimes][col] = gridValues[row][col]; //move the cell down one row
+        gridValues[row][col] = 0; //set the cell to 0
+    }
+}
+
+int Grid::ClearFullRows()
+{
+    int numberOfRowsCleared = 0; //the number of rows cleared
+    for(int row = numberOfRows-1; row >=0; row--) //for all rows
+    {
+        if(IsRowFull(row)) //if the row is full
+        {
+            DeleteRow(row); //delete the row
+            numberOfRowsCleared++; //increment the number of rows cleared
+        }
+        else if(numberOfRowsCleared > 0) //if the row is not full, but we have already cleared at least one row
+        {
+            MoveRowDown(row, numberOfRowsCleared); //move the row down
+        }
+    }
+    return numberOfRowsCleared; //return the number of rows cleared
+}

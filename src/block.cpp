@@ -30,3 +30,17 @@ std::vector <Position> Block::GetCells() {
     }
     return newCells;
 }
+
+void Block::Rotate() {
+    rotationSatate = (rotationSatate + 1);
+    if(rotationSatate == int(cells.size())){
+        rotationSatate = 0;
+    }
+}
+
+void Block::ReverseRotate() {
+    rotationSatate = (rotationSatate - 1);
+    if(rotationSatate == -1){
+        rotationSatate = int(cells.size()) - 1;
+    }
+}
