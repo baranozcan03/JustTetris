@@ -47,7 +47,7 @@ void Grid::Draw()
             //the first two parameters are the x and y coordinates of the top left corner of the rectangle
             //the second two parameters are the width and height of the rectangle
             //the last parameter is the color of the rectangle
-            DrawRectangle(col * cellSize+1, row * cellSize+1, cellSize-1, cellSize-1, cellColor);
+            DrawRectangle(col * cellSize + 21, row * cellSize + 21, cellSize-1, cellSize-1, cellColor);
         }
     }
 }

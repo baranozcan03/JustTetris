@@ -1,0 +1,12 @@
+-w,a,s,d also works insted of arrows
+
+-different font called tetris
+
+-When pressing space bar down movement continues until it reaches the bottom, dash das 2 points
+for every row that is passed.
+
+
+
+
+
+---sound effects were removed

@@ -6,3 +6,9 @@
 //IMPORTANT REMARK: the tetromino controlled by the player will not be handeled in this manner,
 //only the tetrominos that are already on the board will be handeled in this manner
 
+
+//scoring System
+//1 line cleared = 100 points
+//2 lines cleared = 300 points
+//3 lines cleared = 500 points
+//1 point for each move down

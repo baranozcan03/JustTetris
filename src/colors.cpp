@@ -9,6 +9,8 @@ const Color yellow = { 255, 255, 0, 255 };
 const Color purple = { 128, 0, 128, 255 };
 const Color cyan = { 0, 255, 255, 255 };
 const Color blue = { 0, 0, 255, 255 };
+const Color lightBlue = { 0, 255, 255, 255 };
+const Color darkBlue = { 0, 0, 255, 255 };
 
 std::vector<Color> getColors()
 {
