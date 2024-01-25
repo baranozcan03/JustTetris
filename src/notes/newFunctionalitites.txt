@@ -5,6 +5,9 @@
 -When pressing space bar down movement continues until it reaches the bottom, dash das 2 points
 for every row that is passed.
 
+-game over text is more appernt and understandable, also added indication for restartinga finished game
+
+
 
 
 
